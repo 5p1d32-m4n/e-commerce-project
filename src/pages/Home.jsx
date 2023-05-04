@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import ProductDetails from "../components/ProductDetails"
 
 export default function Home() {
     const [products, setProducts] = useState(null)
@@ -30,15 +31,7 @@ export default function Home() {
         <div className="home">
             <div className="products">
                 {products && products.map((product) => (
-                    <div key={product._id} className="product">
-                        <div className="product-img">
-                            <img src={product.image} alt="" />
-                        </div>
-                        <p >{product.name}</p>
-                        <h6>{product.description}</h6>
-                        <p>Price: ${product.price}</p>
-                        <p>Rating:{product.rating}</p>
-                    </div>
+                    <ProductDetails key={product._id} product={product} />
                 ))}
             </div>
         </div>
