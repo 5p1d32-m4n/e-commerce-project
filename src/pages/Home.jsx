@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import ProductDetails from "../components/ProductDetails"
+import ProductDetails from "../components/ProductCard"
 
 export default function Home() {
     const [products, setProducts] = useState(null)
