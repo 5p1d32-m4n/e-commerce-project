@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom"
+import pupLogo from "../assets/demo-logo.png"
+import svgLogo from "../assets/tinywow_demo-logo_23755198.svg"
 
 export default function Navbar() {
     return (
         <header>
-            <div className="container">
-                <Link to={"/"}>
-                    <h1>Pup Dev Commerce</h1>
-                </Link>
-            </div>
+            <nav className="navbar">
+                <div className="navbar--logo">
+                    <Link to={"/"}>
+                        <p>PupDev<img src={pupLogo} alt="logo" />Commerce</p>
+                    </Link>
+                </div>
+            </nav>
         </header>
     )
 }

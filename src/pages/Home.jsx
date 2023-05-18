@@ -29,6 +29,7 @@ export default function Home() {
     }, [])
     return (
         <div className="home">
+            <div className="category-carousel"></div>
             <div className="products-grid">
                 {products && products.map((product) => (
                     <ProductDetails key={product._id} product={product} />
