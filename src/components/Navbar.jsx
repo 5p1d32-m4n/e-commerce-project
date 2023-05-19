@@ -1,15 +1,39 @@
 import { Link } from "react-router-dom"
-import pupLogo from "../assets/demo-logo.png"
-import svgLogo from "../assets/tinywow_demo-logo_23755198.svg"
-
+import pupLogo from "../assets/pupDevLogo.svg"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faSearch, faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons"
 export default function Navbar() {
     return (
         <header>
             <nav className="navbar">
                 <div className="navbar--logo">
-                    <Link to={"/"}>
-                        <p>PupDev<img src={pupLogo} alt="logo" />Commerce</p>
-                    </Link>
+                    <p>
+                        <Link to={"/"} style={{ textDecoration: "none" }}>
+                            PupDev<img src={pupLogo} alt="logo" />Commerce
+                        </Link>
+                    </p>
+                </div>
+                <div className="navbar--nav">
+                    <p className="navbar--link">
+                        <Link to={"/"} style={{ textDecoration: "none" }}>
+                            Abtract Art
+                        </Link>
+                    </p>
+                    <p className="navbar--link">
+                        <Link to={"/"} style={{ textDecoration: "none" }}>
+                            Machine Art
+                        </Link>
+                    </p>
+                    <p className="navbar--link" style={{ textDecoration: "none" }}>
+                        <Link to={"/"}>
+                            Sculpted Art
+                        </Link>
+                    </p>
+                </div>
+                <div className="navbar--quick-buttons">
+                    <FontAwesomeIcon icon={faSearch} />
+                    <FontAwesomeIcon icon={faUser} />
+                    <FontAwesomeIcon icon={faShoppingCart} />
                 </div>
             </nav>
         </header>
