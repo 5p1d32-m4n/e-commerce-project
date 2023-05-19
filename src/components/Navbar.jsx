@@ -16,17 +16,17 @@ export default function Navbar() {
                 <div className="navbar--nav">
                     <p className="navbar--link">
                         <Link to={"/"} style={{ textDecoration: "none" }}>
-                            Abtract Art
+                            Paintings
                         </Link>
                     </p>
                     <p className="navbar--link">
                         <Link to={"/"} style={{ textDecoration: "none" }}>
-                            Machine Art
+                            Sculptures
                         </Link>
                     </p>
                     <p className="navbar--link" style={{ textDecoration: "none" }}>
                         <Link to={"/"}>
-                            Sculpted Art
+                            Tactile Art
                         </Link>
                     </p>
                 </div>
