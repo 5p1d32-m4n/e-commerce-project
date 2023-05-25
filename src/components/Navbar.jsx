@@ -31,9 +31,9 @@ export default function Navbar() {
                     </p>
                 </div>
                 <div className="navbar--quick-buttons">
-                    <FontAwesomeIcon icon={faSearch} />
-                    <FontAwesomeIcon icon={faUser} />
-                    <FontAwesomeIcon icon={faShoppingCart} />
+                    <Link><FontAwesomeIcon icon={faSearch} /></Link>
+                    <Link><FontAwesomeIcon icon={faUser} /></Link>
+                    <Link><FontAwesomeIcon icon={faShoppingCart} /></Link>
                 </div>
             </nav>
         </header>
