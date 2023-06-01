@@ -7,7 +7,7 @@ export default function ProductDetails({ product }) {
             <div className="product-details">
                 <div className="product-data">
                     <div className="product-name">
-                        <p>{product.name}</p>
+                        {product.name}
                     </div>
                     <div className="product-info">
                         <p className="product-price"><strong>Price: $ </strong>{product.price}</p>
