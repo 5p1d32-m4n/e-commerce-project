@@ -53,9 +53,9 @@ export default function Home() {
             {/* Implement flagship Offers */}
             <div className="flagship"></div>
             <div className="department-carousel">
-                {departments && departments.map((department) => {
+                {departments && departments.map((department) => (
                     <DepartmentsCard key={department._id} department={department} />
-                })}
+                ))}
             </div>
             <div className="products-grid">
                 {products && products.map((product) => (
