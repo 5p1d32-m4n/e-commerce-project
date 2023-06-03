@@ -1,11 +1,15 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import ProductDetails from "../components/ProductCard"
 import OfferBanner from "../components/OfferBanner"
 import DepartmentsCard from "../components/DepartmentsCard"
+import Carousel from "../components/Carousel"
+
+
 
 export default function Home() {
     const [products, setProducts] = useState(null)
     const [departments, setDepartments] = useState(null)
+
     useEffect(() => {
         const fetchProducts = async () => {
             try {
@@ -44,18 +48,28 @@ export default function Home() {
             }
         }
 
+
         fetchProducts()
         fetchDepartments()
     }, [])
+
     return (
         <div className="home">
             <OfferBanner offer={'50'} />
-            {/* Implement flagship Offers */}
             <div className="flagship"></div>
-            <div className="department-carousel">
-                {departments && departments.map((department) => (
-                    <DepartmentsCard key={department._id} department={department} />
-                ))}
+            <div className="department-carousel-container">
+                <div className="department-carousel">
+                    {/* Carousel goes here */}
+                    <Carousel objects={departments} />
+                    {/* <ul className="carousel-list" ref={listRef}>
+                        {departments && departments.map((department) => (
+                            <li key={department
+                                ._id}>
+                                <DepartmentsCard key={department._id} department={department} />
+                            </li>
+                        ))}
+                    </ul> */}
+                </div>
             </div>
             <div className="products-grid">
                 {products && products.map((product) => (

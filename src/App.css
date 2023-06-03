@@ -153,8 +153,43 @@
     padding: 10px;
 }
 
-.department-carousel {
-    /* height: 500px; */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
 }
 
-.department-card {}
+.carousel-container button {
+    font-size: 24px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carousel-container button:hover {
+    background-color: #eaeaea;
+}
+
+.department-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.department-card--image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.department-card--name p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
