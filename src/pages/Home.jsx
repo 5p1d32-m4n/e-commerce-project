@@ -2,7 +2,8 @@ import { useEffect, useState, useRef } from "react"
 import ProductDetails from "../components/ProductCard"
 import OfferBanner from "../components/OfferBanner"
 import DepartmentsCard from "../components/DepartmentsCard"
-import Carousel from "../components/Carousel"
+import { Carousel } from "react-responsive-carousel"
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 
 
@@ -60,15 +61,14 @@ export default function Home() {
             <div className="department-carousel-container">
                 <div className="department-carousel">
                     {/* Carousel goes here */}
-                    <Carousel objects={departments} />
-                    {/* <ul className="carousel-list" ref={listRef}>
+                    <Carousel>
                         {departments && departments.map((department) => (
-                            <li key={department
-                                ._id}>
-                                <DepartmentsCard key={department._id} department={department} />
-                            </li>
+                            <div>
+                                <img src={department.image} alt="Image" />
+                                <p className="legend">{department.name}</p>
+                            </div>
                         ))}
-                    </ul> */}
+                    </Carousel>
                 </div>
             </div>
             <div className="products-grid">
